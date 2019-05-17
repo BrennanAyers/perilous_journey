@@ -9,4 +9,17 @@ class LinkedList
   def append(surname)
     @head = Node.new(surname)
   end
+
+  def count
+    nodes = 0
+    current_node = @head
+    if @head != nil
+      nodes = 1
+      until current_node.next_node == nil
+        nodes += 1
+        current_node = current_node.next_node
+      end
+    end
+    nodes
+  end
 end
