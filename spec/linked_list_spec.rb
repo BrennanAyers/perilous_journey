@@ -93,4 +93,13 @@ describe 'Linked List' do
 
     expect(@list.find(2, 1)).to eq("The West Family")
   end
+
+  it 'can find multiple families by index' do
+    @list.append("West")
+    @list.append("Kanye")
+    @list.prepend("Jay-Z")
+    @list.insert(1, "Beyonce")
+
+    expect(@list.find(1, 3)).to eq("The Beyonce Family, followed by the West Family, followed by the Kanye family")
+  end
 end
