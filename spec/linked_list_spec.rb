@@ -61,4 +61,14 @@ describe 'Linked List' do
 
     expect(@list.count).to eq(3)
   end
+
+  it 'can prepend an empty list' do
+    @list.prepend("West")
+
+    expect(@list.head.surname).to eq("West")
+
+    expect(@list.to_string).to eq("The West Family")
+
+    expect(@list.count).to eq(1)
+  end
 end
