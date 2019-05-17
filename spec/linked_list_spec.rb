@@ -49,4 +49,16 @@ describe 'Linked List' do
   it 'should return an error string with no families' do
     expect(@list.to_string).to eq("Sorry, no families here!")
   end
+
+  it 'can prepend a family to the list' do
+    @list.append("West")
+    @list.append("Kanye")
+    @list.prepend("Jay-Z")
+
+    expect(@list.head.surnme).to eq("Jay-Z")
+
+    expect(@list.to_string).to eq("The Jay-Z Family, followed by the West Family, followed by the Kanye Family")
+
+    expect(@list.count).to eq(3)
+  end
 end
