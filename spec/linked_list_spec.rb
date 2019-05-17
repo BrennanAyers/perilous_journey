@@ -24,4 +24,9 @@ describe 'Linked List' do
     @list.append("West")
     expect(@list.count).to eq(1)
   end
+
+  it 'can return a string of a single family' do
+    @list.append("West")
+    expect(@list.to_string).to eq("The West Family")
+  end
 end
