@@ -39,4 +39,10 @@ describe 'Linked List' do
     expect(@list.head.next_node.surname).to eq("Kanye")
   end
 
+  it 'can return a string of multiple families' do
+    @list.append("West")
+    @list.append("Kanye")
+
+    expect(@list.to_string).to eq("The West Family, followed by the Kanye Family")
+  end
 end
