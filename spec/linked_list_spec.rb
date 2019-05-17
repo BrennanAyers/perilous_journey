@@ -15,5 +15,13 @@ describe 'Linked List' do
     expect(@list.head.surname).to eq("West")
   end
 
-  it ''
+  it 'makes a new node with no next node' do
+    @list.append("West")
+    expect(@list.head.next_node).to eq(nil)
+  end
+
+  it 'can return a count of its nodes' do
+    @list.append("West")
+    expect(@list.count).to eq(1)
+  end
 end
