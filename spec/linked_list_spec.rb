@@ -45,4 +45,8 @@ describe 'Linked List' do
 
     expect(@list.to_string).to eq("The West Family, followed by the Kanye Family")
   end
+
+  it 'should return an error string with no families' do
+    expect(@list.to_string).to eq("Sorry, no families here!")
+  end
 end
