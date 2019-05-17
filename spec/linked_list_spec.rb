@@ -84,4 +84,13 @@ describe 'Linked List' do
 
     expect(@list.count).to eq(4)
   end
+
+  it 'can find a single family by index' do
+    @list.append("West")
+    @list.append("Kanye")
+    @list.prepend("Jay-Z")
+    @list.insert(1, "Beyonce")
+
+    expect(@list.find(2, 1)).to eq("The West Family")
+  end
 end
