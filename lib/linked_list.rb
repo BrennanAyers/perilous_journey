@@ -61,6 +61,16 @@ class LinkedList
     end
   end
 
+  def find(index, number)
+    string = "Sorry, no families here!"
+    if index > count
+      string
+    else
+      family = find_node(index)
+      string = "The #{family.surname} Family"
+    end
+  end
+
   private
 
   def last_node
