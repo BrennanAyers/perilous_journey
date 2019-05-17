@@ -67,8 +67,15 @@ class LinkedList
       string
     else
       family = find_node(index)
+      family_index = 1
       string = "The #{family.surname} Family"
+      until family_index == number
+        family_index += 1
+        family = find_node(family_index)
+        string += ", followed by the #{family.surname} Family"
+      end
     end
+    string
   end
 
   private
