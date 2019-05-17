@@ -100,6 +100,6 @@ describe 'Linked List' do
     @list.prepend("Jay-Z")
     @list.insert(1, "Beyonce")
 
-    expect(@list.find(1, 3)).to eq("The Beyonce Family, followed by the West Family, followed by the Kanye family")
+    expect(@list.find(1, 3)).to eq("The Beyonce Family, followed by the West Family, followed by the Kanye Family")
   end
 end
