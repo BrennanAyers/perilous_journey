@@ -29,4 +29,11 @@ describe 'Linked List' do
     @list.append("West")
     expect(@list.to_string).to eq("The West Family")
   end
+
+  it 'can append a family to the next node' do
+    @list.append("West")
+    @list.append("Kanye")
+    expect(@list.head.next_node.surname).to eq("Kanye")
+  end
+  
 end
