@@ -7,7 +7,11 @@ class LinkedList
   end
 
   def append(surname)
-    @head = Node.new(surname)
+    if @head == nil
+      @head = Node.new(surname)
+    else
+      last_node.set_next(Node.new(surname))
+    end
   end
 
   def count
@@ -25,5 +29,17 @@ class LinkedList
 
   def to_string
     "The #{@head.surname} Family"
+  end
+
+  private
+
+  def last_node
+    if @head != nil
+      current_node = @head
+      until current_node.next_node == nil
+        current_node = current_node.next_node
+      end
+    end
+    current_node
   end
 end
