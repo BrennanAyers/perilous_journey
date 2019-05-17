@@ -23,6 +23,9 @@ describe 'Linked List' do
   it 'can return a count of its nodes' do
     @list.append("West")
     expect(@list.count).to eq(1)
+
+    @list.append("Kanye")
+    expect(@list.count).to eq(2)
   end
 
   it 'can return a string of a single family' do
@@ -35,5 +38,5 @@ describe 'Linked List' do
     @list.append("Kanye")
     expect(@list.head.next_node.surname).to eq("Kanye")
   end
-  
+
 end
