@@ -102,4 +102,14 @@ describe 'Linked List' do
 
     expect(@list.find(1, 3)).to eq("The Beyonce Family, followed by the West Family, followed by the Kanye Family")
   end
+
+  it 'can check if a family is included' do
+    @list.append("West")
+    @list.append("Kanye")
+    @list.prepend("Jay-Z")
+    @list.insert(1, "Beyonce")
+
+    expect(@list.includes?("Beyonce")).to eq(true)
+    expect(@list.includes?("Kardashian")).to eq(false)
+  end
 end
