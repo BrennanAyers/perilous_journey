@@ -55,7 +55,7 @@ describe 'Linked List' do
     @list.append("Kanye")
     @list.prepend("Jay-Z")
 
-    expect(@list.head.surnme).to eq("Jay-Z")
+    expect(@list.head.surname).to eq("Jay-Z")
 
     expect(@list.to_string).to eq("The Jay-Z Family, followed by the West Family, followed by the Kanye Family")
 
