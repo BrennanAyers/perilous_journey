@@ -22,4 +22,8 @@ class LinkedList
     end
     nodes
   end
+
+  def to_string
+    "The #{@head.surname} Family"
+  end
 end
