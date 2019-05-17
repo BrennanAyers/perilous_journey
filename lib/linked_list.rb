@@ -63,9 +63,7 @@ class LinkedList
 
   def find(index, number)
     string = "Sorry, no families here!"
-    if index > count
-      string
-    else
+    unless index > count
       family = find_node(index)
       family_index = 1
       string = "The #{family.surname} Family"
@@ -76,6 +74,10 @@ class LinkedList
       end
     end
     string
+  end
+
+  def includes?(surname)
+    all_families.include?(surname)
   end
 
   private
@@ -100,5 +102,17 @@ class LinkedList
       end
     end
     current_node
+  end
+
+  def all_families
+    if @head != nil
+      families = [@head.surname]
+      current_node = @head
+      until current_node.next_node == nil
+        current_node = current_node.next_node
+        families << current_node.surname
+      end
+    end
+    families
   end
 end
