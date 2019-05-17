@@ -71,4 +71,17 @@ describe 'Linked List' do
 
     expect(@list.count).to eq(1)
   end
+
+  it 'can insert a family into a position' do
+    @list.append("West")
+    @list.append("Kanye")
+    @list.prepend("Jay-Z")
+    @list.insert(1, "Beyonce")
+
+    expect(@list.head.surname).to eq("Jay-Z")
+
+    expect(@list.to_string).to eq("The Jay-Z Family, followed by the Beyonce Family, followed by the West Family, followed by the Kanye Family")
+
+    expect(@list.count).to eq(4)
+  end
 end
